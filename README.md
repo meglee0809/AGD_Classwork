@@ -4,5 +4,3 @@
 - Test-Driven Development
 - Comprehensions
 - Object Oriented Programming (OOP)
-
-##################################### hi
