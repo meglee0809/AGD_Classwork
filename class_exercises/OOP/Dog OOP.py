@@ -12,8 +12,6 @@ class Dog:
 grey = Dog("Grey",4)
 pumi = Dog("Pumi",5)
 
-
-
 #tests
 print(grey.name)
 print(grey.age)
