@@ -1,12 +1,19 @@
 #dog class exercises
-
 class Dog:
-    def __init__(self,name,age): #__init__ is
-        self.name = name #self refers to the Dog itself
+    species = "Canis familiaris" #same for all 'dogs'
+    def __init__(self, name, age): #declaring attributes of the class
+        self.name = name
         self.age = age
+    def speak(self,sound):
+        return f"{self.name} says {sound}!"
+    def __str__(self): #this gives the attributes of that specific dog
+        return f"{self.name} is {self.age} years old :)"
 
-    def speaks(self): #if dogname.speaks() is used it will return the below
-        return f'{self.name} says woof woof'
+grey = Dog("Grey",4)
+pumi = Dog("Pumi",5)
 
-
-grey = Dog('Grey',4)
+#tests
+print(grey.name)
+print(grey.age)
+print(grey.speak("woof")) #to use def functions you need the dog.function(stuff)
+print(grey) #def __str__ test
