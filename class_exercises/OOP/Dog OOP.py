@@ -17,7 +17,7 @@ class Dachshund(Dog): #(dog) means its a type of dog but unique to others dogs
 grey = Dog("Grey",4)
 pumi = Dog("Pumi",5)
 potato = Dachshund("Potato",6)
-
+potato.name = "potato the magnificent" #how to change an attribute
 #tests
 print(grey.name)
 print(grey.age)
