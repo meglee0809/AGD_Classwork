@@ -1,4 +1,6 @@
 #from Basket_item import Item
+import warnings
+
 class Item:
     # Constructor
     def __init__(self,name,description,price,stock_lvl):
@@ -6,6 +8,7 @@ class Item:
         self.description = description
         self.price = price
         self.stock_lvl = stock_lvl
+
     def stock_update(self,new_stock_lvl):
         self.stock_lvl = new_stock_lvl
 
@@ -24,15 +27,16 @@ class ShoppingBasket:
                 self.items[item] += quantity
             else:
                 self.items[item] = quantity
+
             new_stock_lvl = (item.stock_lvl - quantity)
             if new_stock_lvl >= 0:
                 item.stock_update(new_stock_lvl)
             else:
-                print(f"Invalid operation - Cannot add {quantity} of {item.name} — only {item.stock_lvl} in stock. :(")
+                raise ValueError(f"Invalid operation - Cannot add {quantity} of {item.name} — only {item.stock_lvl} in stock. :(")
+                warnings.warn(f"Invalid operation - Cannot add {quantity} of {item.name} — only {item.stock_lvl} in stock. :(")
                 self.items[item] -= quantity
-
         else:
-            print("Invalid operation - Quantity must be a positive number!")
+            raise ValueError("Invalid operation - Quantity must be a positive number!")
 
     # A method to remove an item from the shopping basket (or reduce its quantity)
     def removeItem(self, item, quantity=0):
@@ -97,6 +101,9 @@ class ShoppingBasket:
     def isEmpty(self):
         return len(self.items) == 0
 
+
+'''
+#Tests---------------------------------------------
 tomatoSoup = Item("Tomato Soup","200mL can", 0.70,5)
 spaghetti = Item("Spaghetti","500g pack", 1.10,4)
 blackOlives = Item("Black Olives Jar","200g Jar", 2.10,3)
@@ -104,7 +111,6 @@ mozarella = Item("Mozarella","100g", 1.50,2)
 gratedCheese = Item("Grated Cheese","100g",2.20,1)
 
 
-#Tests---------------------------------------------
 myBasket = ShoppingBasket()
 
 #print(tomatoSoup.stock_lvl) should be 5
@@ -123,3 +129,4 @@ myBasket.view()
 
 myBasket.reset()
 myBasket.isEmpty()
+'''
