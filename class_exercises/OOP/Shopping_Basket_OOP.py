@@ -103,30 +103,3 @@ class ShoppingBasket:
     # A method to empty the content of the basket
     def reset(self):
         self.items = {}
-
-
-#Tests---------------------------------------------
-tomatoSoup = Item("Tomato Soup","200mL can", 0.70,5)
-spaghetti = Item("Spaghetti","500g pack", 1.10,4)
-blackOlives = Item("Black Olives Jar","200g Jar", 2.10,3)
-mozarella = Item("Mozarella","100g", 1.50,2)
-gratedCheese = Item("Grated Cheese","100g",2.20,1)
-
-
-myBasket = ShoppingBasket()
-
-#print(tomatoSoup.stock_lvl) should be 5
-myBasket.addItem(tomatoSoup, 4)
-#print(tomatoSoup.stock_lvl) should be 1
-myBasket.addItem(blackOlives, 1)
-myBasket.addItem(mozarella, 2)
-#myBasket.addItem(tomatoSoup, 6)
-
-myBasket.removeItem(tomatoSoup, 3)
-#print(tomatoSoup.stock_lvl) should be 4
-myBasket.removeItem(tomatoSoup, 2364284)
-#myBasket.view()
-myBasket.updateItem(tomatoSoup, 2)
-
-myBasket.view()
-myBasket.reset()
