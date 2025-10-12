@@ -1,5 +1,5 @@
 import pytest
-from class_exercises.tdd.Caesar_cipher import to_shift
+from class_exercises.TDD.Caesar_cipher import to_shift
 
 normal_data = [("a",1,"b"),
                 ("z",2,"b"),

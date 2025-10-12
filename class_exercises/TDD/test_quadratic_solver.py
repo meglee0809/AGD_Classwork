@@ -1,7 +1,7 @@
 import pytest
 from pytest import approx
 import math
-from class_exercises.tdd.Quadratic_solver import solve_quadratic
+from class_exercises.TDD.Quadratic_solver import solve_quadratic
 
 normal_data = [(1,-5,6, 3.0,2.0), #integer
                 (1,6,5, -5.0,-1.0), #double check
