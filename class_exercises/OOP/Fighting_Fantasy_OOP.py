@@ -1,3 +1,4 @@
+#19:52
 import random
 
 def dice_sum(num_dice: int = 1,num_sides: int = 6):
@@ -55,7 +56,7 @@ class Character:
     def return_character_status(self):
         return(f"{self.name} has {self.stamina} stamina !")
 
-    def return_rolls_status(self):
+    def return_roll_status(self):
         return(f"{self.name} rolled a {self.roll} with a total score of {self.score} !")
 
     @property
@@ -84,6 +85,17 @@ class PlayerCharacter(Character):
 
     def __repr__(self): #this is dunder keys
         return f"Character('{self.name}', skill={self.skill}, stamina={self.stamina}, luck={self.luck})"
+
+    def test_luck(self):
+        luck_roll = dice_sum(2)
+        super.roll = luck_roll #does this work??
+        if luck_roll <= self.luck:
+            self.luck -= 1
+            return True
+        else:
+            self.luck -= 1
+            return False
+
 
 #characters-------------------------------------------------------------------------
 elizabeth = PlayerCharacter.generate_player_character("Elizabeth")
