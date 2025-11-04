@@ -10,14 +10,17 @@ def dice_sum(num_dice: int = 1,num_sides: int = 6):
 
 class Character:
     def __init__(self,name,skill,stamina):
-        self.name = name
+        self.name = name.title()
         self.skill = skill
         self.stamina = stamina
         self.roll = None
         self.score = None
 
-    def __repr__(self): #this is dunder keys
+    def __repr__(self): #this is a dunder key that produces 'computer' readable content
         return f"Character('{self.name}', skill={self.skill}, stamina={self.stamina})"
+
+    def __str__(self): #this is another dunder key that should produce HUMAN readable content
+        return f'{self.name}'
 
     def find_score(self):
         self.roll = dice_sum(2)
@@ -54,26 +57,27 @@ class Character:
             return result
 
     def return_character_status(self):
-        return(f"{self.name} has {self.stamina} stamina !")
+        return(f"{self.name} has skill {self.skill} and stamina {self.stamina} !")
 
     def return_roll_status(self):
-        return(f"{self.name} rolled a {self.roll} with a total score of {self.score} !")
+        return(f"{self.name} rolled a {self.roll} for a total score of {self.score} !")
 
     @property
     def is_dead(self):
-        return self.stamina <= 0
+        return self.stamina <= 0 #returns boolean
 
     @is_dead.setter #this decorator modifies what the function does -> if you do orc.is_dead = True, it kills him lol
     def is_dead(self, dead: bool):                                    #if you do orc.is_dead = False, it revives him with 1 stamina
         if dead:
             self.stamina = 0
-        else:
-            self.stamina = min(self.stamina, 1)
+        elif not dead and self.is_dead == True:
+            self.stamina = 1
+
 
 
 class PlayerCharacter(Character):
     def __init__(self,name,skill,stamina,luck):
-        super().__init__(name,skill,stamina) #uses the super class init function
+        super().__init__(name,skill,stamina) #uses the super class init function to inherit ALL ATTRIBUTES including score and roll!!, those are just stated to be used/
         self.luck = luck
 
     @classmethod #modify a class state that would apply across all the instances of the class NOT a single character
@@ -84,11 +88,11 @@ class PlayerCharacter(Character):
         return cls(name,skill,stamina,luck)
 
     def __repr__(self): #this is dunder keys
-        return f"Character('{self.name}', skill={self.skill}, stamina={self.stamina}, luck={self.luck})"
+        return f"PlayerCharacter('{self.name}', skill={self.skill}, stamina={self.stamina}, luck={self.luck})"
 
     def test_luck(self):
         luck_roll = dice_sum(2)
-        super.roll = luck_roll #does this work??
+        self.roll = luck_roll #works cuz player characters have character attributes ASWELL
         if luck_roll <= self.luck:
             self.luck -= 1
             return True

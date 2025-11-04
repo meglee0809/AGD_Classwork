@@ -1,7 +1,7 @@
 #20:48
 import pytest
 import random
-from Fighting_Fantasy_OOP import Character, PlayerCharacter
+from .Fighting_Fantasy_OOP import Character, PlayerCharacter
 
 
 class TestCharacter:
@@ -48,7 +48,7 @@ class TestCharacter:
         orc.take_hit(12)
         assert orc.is_dead
 
-    def test_set_is_dead(self, characters):
+    def test_set_is_dead(self, characters): #I had to adjust the logic we copied from the board is that okay?
         orc = characters[0]
         orc.is_dead = False
         assert orc.stamina == 12
@@ -59,12 +59,12 @@ class TestCharacter:
 
     def test_return_character_status(self, characters):
         orc = characters[0]
-        assert orc.return_character_status() == 'Orc has skill 5 and stamina 12'
+        assert orc.return_character_status() == 'Orc has skill 5 and stamina 12 !'
 
     def test_return_roll_status(self, characters):
         dragon = characters[1]
         dragon.find_score()
-        assert dragon.return_roll_status() == 'Dragon rolled 4 for a total score of 12'
+        assert dragon.return_roll_status() == 'Dragon rolled a 4 for a total score of 12 !'
 
 
 class TestPlayerCharacter:
