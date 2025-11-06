@@ -13,8 +13,9 @@ i rolled around 8 times and the hero never won
  also rolled with a dice for damage instead of preset -1 and +1
 - with luck it would make more sense to roll one dice to its highest number as equal or under makes no sense
   or you could make it so that luck allows you to roll again (dnd)
-- It would be interestibg to have different numbers of dice depending on the enemy
+- It would be interesting to have different numbers of dice depending on the enemy
 '''
+
 import pytest
 import random
 from .Fighting_Fantasy_OOP import Character, PlayerCharacter

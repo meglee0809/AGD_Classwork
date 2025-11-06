@@ -115,6 +115,7 @@ class Game:
     def load_creatures(cls):
         creatures = [Character("Rawry the dragon",10,22),
                      Character("Jelly-fish",5,5),
+                     Character("jellyfish?",10,10),
                      Character("Mildly Warm",8,5),
                      Character("Sluuudge", 2, 10),
                      ]
@@ -133,11 +134,20 @@ class Game:
     def set_player(self,player_character):
         self.player = player_character
 
-    def resolve_fight_round(self):
+    def resolve_fight_round(self): #fights and records the resuls of the round
         self.round_result = self.player.fight_round(self.op)
 
-    def return_character_status(self):
-        msg = f"{self.player.name} has skill {self.player.skill} and stamina {self.player.stamina}"
+    def return_round_results(self):
+        msg = (self.player.return_roll_status() + "\n" +
+               self.op.return_roll_status() + "\n")
+        if self.round_result == "won":
+            msg += "Player won this round!\n"
+        elif self.round_result == "lost":
+            msg += "Player lost this round!\n"
+        else:
+            msg += "This round is a draw!\n"
+        print(msg)
+
 
 
 game = Game()
