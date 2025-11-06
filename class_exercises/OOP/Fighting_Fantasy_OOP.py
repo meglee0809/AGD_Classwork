@@ -1,4 +1,4 @@
-#19:52
+
 import random
 
 def dice_sum(num_dice: int = 1,num_sides: int = 6):
@@ -113,9 +113,9 @@ class Game:
     """Game class - controls the Fighting Fantasy game class"""
     @classmethod
     def load_creatures(cls):
-        creatures = [Character("Rawry the dragon",10,22),
+        creatures = [Character("Rawry the dragon",10,10),
                      Character("Jelly-fish",5,5),
-                     Character("jellyfish?",10,10),
+                     Character("JELLYF ISH?",10,20),
                      Character("Mildly Warm",8,5),
                      Character("Sluuudge", 2, 10),
                      ]
@@ -131,21 +131,26 @@ class Game:
         self.op = random.choice(self.creatures)
         self.creatures.remove(self.op)
 
-    def set_player(self,player_character):
+    def set_player(self,player_character): #use generate_player_character here
         self.player = player_character
 
-    def resolve_fight_round(self): #fights and records the resuls of the round
+    def return_character_statuses(self):
+        msg = (self.player.return_character_status() + "\n" +
+               self.opponent.return_character_status())
+        return msg
+
+    def resolve_fight_round(self): #fights and records the results of the round
         self.round_result = self.player.fight_round(self.op)
 
     def return_round_results(self):
         msg = (self.player.return_roll_status() + "\n" +
                self.op.return_roll_status() + "\n")
         if self.round_result == "won":
-            msg += "Player won this round!\n"
+            msg += "You won this round!\n"
         elif self.round_result == "lost":
-            msg += "Player lost this round!\n"
+            msg += "You lost this round.\n"
         else:
-            msg += "This round is a draw!\n"
+            msg += "This round is a draw..\n"
         print(msg)
 
 
@@ -153,3 +158,4 @@ class Game:
 game = Game()
 game.choose_opponent()
 game.set_player(elizabeth)
+print(game.creatures[2])

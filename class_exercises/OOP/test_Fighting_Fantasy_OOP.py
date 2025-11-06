@@ -98,7 +98,7 @@ class TestPlayerCharacter:
         assert pc.__repr__() == "PlayerCharacter('Sir Tom', skill=9, stamina=14, luck=10)"
 
     def test_test_luck(self, player_character):
-        for _ in range(5):
+        for i in range(5):
             lucky = player_character.test_luck()
             assert lucky == True
         lucky = player_character.test_luck()
