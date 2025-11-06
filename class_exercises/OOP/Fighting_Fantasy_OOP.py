@@ -114,10 +114,10 @@ class Game:
     """Game class - controls the Fighting Fantasy game class"""
     @classmethod
     def load_creatures(cls):
-        creatures = [Character("Jelly-fish",2,15),
-                     #Character("Rawry the dragon",5,25)
-                     #Character("Mildly Warm",3,10),
-                     #Character("Sluuudge", 1, 20),
+        creatures = [Character("Jelly-Fish",2,15),
+                     Character("Rawry the dragon",5,25),
+                     Character("Mildly Warm",3,10),
+                     Character("Sluuudge", 1, 20),
                      ]
         return creatures
 
