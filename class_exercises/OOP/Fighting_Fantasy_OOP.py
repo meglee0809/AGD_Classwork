@@ -4,7 +4,7 @@ import random
 def dice_sum(num_dice: int = 1,num_sides: int = 6):
     """ use this to sum the rolls instead of for i in range """ #the info in the triple " is given about the function  with help(function)
     '''i'm better'''
-    total = sum(random.randint(1,num_sides) for i in range(num_dice))
+    total = sum(random.randint(1,num_sides) for _ in range(num_dice))
     return total
 
 
@@ -26,8 +26,8 @@ class Character:
         self.roll = dice_sum(2)
         self.score = self.roll + self.skill
 
-    def take_hit(self, damage=2):
-        self.stamina -= damage
+    def take_hit(self):
+        self.stamina -= dice_sum(1,8)
 
     def fight_round(self,op):
         self.find_score()
@@ -36,7 +36,7 @@ class Character:
         if self.score > op.score:
             op.take_hit()
             print(f"{op.name} takes a hit!!")
-            print(f"-- {op.stamina} damage --")
+            print(f"-- {op.name} has {op.stamina} stamina left --")
             result = "won"
             return result
 
@@ -44,23 +44,23 @@ class Character:
         elif self.score < op.score:
             self.take_hit()
             print(f"{self.name} got hit!!")
-            print(f"-- {self.stamina} damage --")
+            print(f"-- {self.name} has {self.stamina} stamina left --")
             result = "lost"
             return result
 
         #draw
         else:
-            self.take_hit(1)
-            op.take_hit(1)
+            self.take_hit()
+            op.take_hit()
             print(f"You both got hit!!")
             result = "draw"
             return result
 
     def return_character_status(self):
-        return(f"{self.name} has skill {self.skill} and stamina {self.stamina} !")
+        return f"{self.name} has skill {self.skill} and stamina {self.stamina} !"
 
     def return_roll_status(self):
-        return(f"{self.name} rolled a {self.roll} for a total score of {self.score} !")
+        return f"{self.name} rolled a {self.roll} for a total score of {self.score} !"
 
     @property
     def is_dead(self):
@@ -82,8 +82,8 @@ class PlayerCharacter(Character):
 
     @classmethod #modify a class state that would apply across all the instances of the class NOT a single character
     def generate_player_character(cls, name):
-        skill = 6 + dice_sum(1)
-        stamina = 12 + dice_sum(2)
+        skill = dice_sum(1) #note - used to have a +6
+        stamina = + dice_sum(5)
         luck = 6 + dice_sum(1)
         return cls(name,skill,stamina,luck)
 
@@ -102,22 +102,22 @@ class PlayerCharacter(Character):
 
 
 #characters-------------------------------------------------------------------------
+'''
 elizabeth = PlayerCharacter.generate_player_character("Elizabeth")
 
 kris = Character("Kris",11,13)
 dragon = Character("Rawry the dragon",10,22)
-
+'''
 
 #game----------------------------------------------------------------------------------
 class Game:
     """Game class - controls the Fighting Fantasy game class"""
     @classmethod
     def load_creatures(cls):
-        creatures = [Character("Rawry the dragon",10,10),
-                     Character("Jelly-fish",5,5),
-                     Character("JELLYF ISH?",10,20),
-                     Character("Mildly Warm",8,5),
-                     Character("Sluuudge", 2, 10),
+        creatures = [Character("Jelly-fish",2,15),
+                     #Character("Rawry the dragon",5,25)
+                     #Character("Mildly Warm",3,10),
+                     #Character("Sluuudge", 1, 20),
                      ]
         return creatures
 
@@ -129,14 +129,13 @@ class Game:
 
     def choose_opponent(self):
         self.op = random.choice(self.creatures)
-        self.creatures.remove(self.op)
 
     def set_player(self,player_character): #use generate_player_character here
         self.player = player_character
 
     def return_character_statuses(self):
         msg = (self.player.return_character_status() + "\n" +
-               self.opponent.return_character_status())
+               self.op.return_character_status())
         return msg
 
     def resolve_fight_round(self): #fights and records the results of the round
@@ -157,5 +156,5 @@ class Game:
 
 game = Game()
 game.choose_opponent()
-game.set_player(elizabeth)
-print(game.creatures[2])
+game.set_player(PlayerCharacter.generate_player_character("Elizabeth"))
+print(game.op.name)
