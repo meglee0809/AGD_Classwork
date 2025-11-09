@@ -1,6 +1,11 @@
 import time
 from colorama import Fore,Back,Style
 
+'''TO USE COOLTYPE, you need to “edit configurations” 
+then pick the file uour using cooltype in, 
+then in the run section press “modify options” 
+and  toggle “emulate terminal in output console” on 😭'''
+
 def cooltype(text='Rian',interval=0.03,nextline = True):
     for item in text:
         print(item,end='',flush=True)
@@ -18,8 +23,6 @@ def coolinput(text='',interval=0.01):
         print(item,end='')
         time.sleep(interval)
     return input()
-
-cooltype("megan")
 
 #toms thing
 class Player:

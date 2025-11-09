@@ -13,6 +13,7 @@ class Character:
         self.name = name.title()
         self.skill = skill
         self.stamina = stamina
+        self.original_stamina = self.stamina
         self.roll = None
         self.score = None
 
@@ -26,8 +27,8 @@ class Character:
         self.roll = dice_sum(2)
         self.score = self.roll + self.skill
 
-    def take_hit(self):
-        self.stamina -= dice_sum(1,8)
+    def take_hit(self,specificHit=dice_sum(1,8)):
+        self.stamina -= specificHit
 
     def fight_round(self,op):
         self.find_score()
@@ -70,8 +71,8 @@ class Character:
     def is_dead(self, dead: bool):                                    #if you do orc.is_dead = False, it revives him with 1 stamina
         if dead:
             self.stamina = 0
-        elif not dead and self.is_dead == True:
-            self.stamina = 1
+        elif self.is_dead:
+            self.stamina = 20
 
 
 
@@ -83,7 +84,7 @@ class PlayerCharacter(Character):
     @classmethod #modify a class state that would apply across all the instances of the class NOT a single character
     def generate_player_character(cls, name):
         skill = dice_sum(1) #note - used to have a +6
-        stamina = + dice_sum(5)
+        stamina = dice_sum(5)
         luck = 6 + dice_sum(1)
         return cls(name,skill,stamina,luck)
 
