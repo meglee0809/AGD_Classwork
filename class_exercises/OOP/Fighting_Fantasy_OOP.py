@@ -157,4 +157,3 @@ class Game:
 game = Game()
 game.choose_opponent()
 game.set_player(PlayerCharacter.generate_player_character("Elizabeth"))
-print(game.op.name)

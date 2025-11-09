@@ -1,5 +1,6 @@
 #20:50 -  -5 mins
 from Fighting_Fantasy_OOP import Game,Character,PlayerCharacter
+from CoolType import cooltype
 import time
 
 class GameCLI:
@@ -13,34 +14,34 @@ class GameCLI:
         """Welcomes the player to Fighting Fantasy - asks for a player_name
         calls self.game methods to set the player and displays their stats,
         then runs self.fight_opponent"""
-        print("You wake up after a long, aimless fall, to ground and no hole.\n"
-              "* you hear a fish aimlessly flopping on the ground *\n"
-              ". . .\n"
-              " I see you have come from above into our grounds.\n"
-              "..Welcome to fighting fantasy..")
-        print("(the limited limined limined liminal edition)")
+        cooltype("You wake up after a long, aimless fall, to ground and no hole.\n"
+              "* you hear a fish aimlessly flopping on the ground *\n")
+        cooltype(". . .\n",0.05)
+        cooltype(" I see you have come from above into our grounds.\n"
+              "..Welcome to fighting fantasy..\n")
+        cooltype("(the limited limined limined liminal edition)\n",0.05)
 
         player_name = input("Enter y o u r name: ")
         self.game.set_player(PlayerCharacter.generate_player_character(player_name))
 
-        print(f"{" ".join(player_name)}... i've never encountered that human name before..")
-        print("Welcome. with all my heart. or jelly.. (i suppose)")
-        print(self.game.player.return_character_status())
-        print("Good luck.")
+        cooltype(f"{" ".join(player_name)}... i've never encountered that human name before..\n")
+        cooltype("Welcome. with all my heart. or jelly.. (i suppose)\n")
+        cooltype(self.game.player.return_character_status())
+        cooltype("\nGood luck.")
         self.fight_opponent()
 
 # boss battle antics--------------------------------------------------------
     def fight_boss_battle(self):
         """you fight the boss lol"""
-        print("\n" * 10)
-        print("* fish flop.sfx plays *\n"
+        cooltype("\n" * 10)
+        cooltype("* fish flop.sfx plays *\n"
               "* continued fish flopping noises *\n"
               "The fish jumps flopping onto the ceiling with a burst of jelly "
               "splattering all over the ceiling and the floors.\n"
               "You stare at the red jelly on the ceiling and decide "
               "to leave it instead of eating it.\n")
-        print(". . .")
-        print("long ribbons of tentacles spurt from the blob..\n"
+        cooltype(". . .\n",0.05)
+        cooltype("long ribbons of tentacles spurt from the blob..\n"
               "the blob slowly floats down..\n"
               "the Jelly-fish has seemingly transformed into JELLYF ISH?\n"
               "..and it's ready for round two.")
@@ -49,28 +50,28 @@ class GameCLI:
 
         valid_fight = True
         while valid_fight == True:
-            print("\n" * 5)
+            cooltype("\n" * 5)
             user_ask_fight = input("Do you wish to fight? (Y/N): ")
             if user_ask_fight.upper() == "Y":
                 self.game.resolve_fight_round()
-                print(self.game.return_round_results())
+                cooltype(self.game.return_round_results())
                 if self.game.player.is_dead and self.game.op.is_dead:
-                    print("\n" * 10)
-                    print(f"You... {" ".join(self.game.player.name)}.. y o u didn't make it. \n"
+                    cooltype("\n" * 10)
+                    cooltype(f"You... {" ".join(self.game.player.name)}.. y o u didn't make it. \n"
                           f"but.. neither did {self.game.op.name}\n"
                           "I suppose not anyone gets a happy ending..\n"
                           "..Leaves a sour taste in your mouth doesn't it?")
                     valid_fight = False
                 elif self.game.player.is_dead:
-                    print("\n" * 10)
-                    print("You... {" ".join(player_name)} y o u didn't make it. \n"
+                    cooltype("\n" * 10)
+                    cooltype("You... {" ".join(player_name)} y o u didn't make it. \n"
                           "..not in the last world and not in t h i s one. \n"
                           "You detect a slight sourness in the fi?s?h'?s tone.\n"
                           "w i l l  y o u  t ry  a g a i n  i n  t h e  n e x t ?")
                     valid_fight = False
                 elif self.game.op.is_dead:
-                    print("\n" * 10)
-                    print("You come out v i c t o r i o u s.\n"
+                    cooltype("\n" * 10)
+                    cooltype("You come out v i c t o r i o u s.\n"
                           "The jelly starts to melt into the cracks on the ground..\n"
                           ". . .\n"
                           "The jelly speaks.\n"
@@ -84,68 +85,68 @@ class GameCLI:
                     valid_fight = False
 
             else:
-                print("\n" * 10)
-                print("It appears you weren't ready for this..\n"
+                cooltype("\n" * 10)
+                cooltype("It appears you weren't ready for this..\n"
                       "To flee at the first chance you get.\n")
-                print("* fish flop.sfx plays *")
+                cooltype("* fish flop.sfx plays *")
                 valid_fight = False
 
 
 # 2) fight initiated--------------------------------------------------------
     def fight_opponent(self):
         """Chooses an opponent and displays their stats, then runs self.fight_battle"""
-        print("\n" * 10)
-        print("An opponent approaches you...")
+        cooltype("\n" * 10)
+        cooltype("An opponent approaches you...")
         self.game.choose_opponent()
-        print(f"It appears to be {self.game.op}")
-        print(f"It has {self.game.op.return_character_status()}")
+        cooltype(f"It appears to be {self.game.op}")
+        cooltype(f"It has {self.game.op.return_character_status()}")
         self.fight_battle()
 
 
     def fight_battle(self,):
         """Continues to fight rounds until the player chooses to quit or
         either player or opponent are dead."""
-        print("\n" * 10)
+        cooltype("\n" * 10)
 
         valid_fight = True
         while valid_fight == True:
-            print("\n" * 5)
-            print(f"{self.game.return_character_statuses()} \n")
+            cooltype("\n" * 5)
+            cooltype(f"{self.game.return_character_statuses()} \n")
             user_ask_fight = input("Do you wish to fight? (Y/N): ")
             if user_ask_fight.upper() == "Y":
                 self.game.resolve_fight_round()
-                print(self.game.return_round_results())
+                cooltype(self.game.return_round_results())
                 if self.game.player.is_dead and self.game.op.is_dead:
-                    print("\n" * 10)
-                    print(f"You... {" ".join(self.game.player.name)}.. y o u didn't make it. \n"
+                    cooltype("\n" * 10)
+                    cooltype(f"You... {" ".join(self.game.player.name)}.. y o u didn't make it. \n"
                           f"but.. neither did {self.game.op.name}\n"
                           "I suppose not anyone gets a happy ending..\n"
                           "..Leaves a sour taste in your mouth doesn't it?")
                     valid_fight = False
                 elif self.game.player.is_dead:
-                    print("\n" * 10)
-                    print(f"You... {" ".join(self.game.player.name)}.. y o u didn't make it. \n"
+                    cooltype("\n" * 10)
+                    cooltype(f"You... {" ".join(self.game.player.name)}.. y o u didn't make it. \n"
                           "..not in the last world and not in t h i s one. \n"
                           "will you to try again in the next?")
                     valid_fight = False
                 elif self.game.op.is_dead:
-                    print("\n" * 10)
+                    cooltype("\n" * 10)
                     if self.game.op.name == "Jelly-Fish":
-                        print("You come out v i c t o r i o u s. /A.e ]?\n"
+                        cooltype("You come out v i c t o r i o u s. /A.e ]?\n"
                               f"You defeated the {self.game.op.name}\n")
-                        print(". . . o r  p e r h a p s  n o t  y e t . . .")
+                        cooltype(". . . o r  p e r h a p s  n o t  y e t . . .",0.05)
                         self.fight_boss_battle()
                     else:
-                        print("You come out v i c t o r i o u s.\n"
+                        cooltype("You come out v i c t o r i o u s.\n"
                               f"You defeated the {self.game.op.name}\n"
                               f"Congratulations {self.game.player.name}!!")
                     valid_fight = False
 
             else:
-                print("\n" * 10)
-                print("It appears you weren't ready for this..\n"
+                cooltype("\n" * 10)
+                cooltype("It appears you weren't ready for this..\n"
                       "To flee at the first chance you get.")
-                print("* fish flop.sfx plays *")
+                cooltype("* fish flop.sfx plays *")
                 valid_fight = False
 
 
