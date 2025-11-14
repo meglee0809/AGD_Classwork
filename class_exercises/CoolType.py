@@ -1,0 +1,37 @@
+import time
+from colorama import Fore,Back,Style
+
+'''TO USE COOLTYPE, you need to “edit configurations” 
+then pick the file uour using cooltype in, 
+then in the run section press “modify options” 
+and  toggle “emulate terminal in output console” on 😭'''
+
+def cooltype(text='Rian',interval=0.03,nextline = True):
+    for item in text:
+        print(item,end='',flush=True)
+        time.sleep(interval)
+    if nextline:
+        print('\n')
+def cooltypecolour(text='Rian',interval=0.05,colour=Fore.MAGENTA,nextline = True):
+    print(colour)
+    cooltype(text,0.05)
+    print(Style.RESET_ALL)
+    if nextline:
+        print('\n')
+def coolinput(text='',interval=0.01):
+    for item in text:
+        print(item,end='')
+        time.sleep(interval)
+    return input()
+
+#toms thing
+class Player:
+    def __init__(self,pname,phealth,pstrength,px,py,pmoves,pcolour,peffects):
+        self.name = pname
+        self.health = phealth
+        self.strength = pstrength
+        self.x = px
+        self.y = py
+        self.moves = pmoves
+        self.colour = pcolour
+        self.effects = peffects
