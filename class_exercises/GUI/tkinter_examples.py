@@ -17,16 +17,21 @@ class MainFrame(tk.Frame):
         self.place_widgets() #widget is an item
 
     def place_widgets(self):
-        self.txt.grid(row=0,column=0)  # puts it at the top
-        self.btn.grid(row=0,column=1)
-        self.edt.grid(row=1,column=1,
-                      padx=10, pady=10)
-        self.sld.grid(row=1,column=0)
+        settings = {'padx': 10, 'pady' : 10, 'sticky': 'nswe'} #pad puts space around the stuff
+        self.txt.grid(row=0,column=0, **settings)  # puts it at the top
+        self.btn.grid(row=0,column=1, **settings)
+        self.edt.grid(row=1,column=1, **settings)
+        self.sld.grid(row=1,column=0, **settings)
+
+        self.columnconfigure(0, weight=2)
+        self.columnconfigure(1, weight=1)
+        self.rowconfigure(0, weight=1)
+        self.rowconfigure(1, weight=5)
 
 if __name__ == '__main__':
     root = tk.Tk() #gives a blank GUI
+    root.geometry('500x500+100+100') #frame
     root.title("The Do Not Press The Button Game (dont press it).exe") #the name of the window
     main_frame = MainFrame(root)
     main_frame.pack(fill=tk.BOTH, expand=True)
-    root.mainloop()
     root.mainloop() #keeps the program listening dun dun dunnn...
