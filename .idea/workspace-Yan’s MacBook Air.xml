@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d89dd935-e5af-4ce4-8247-1a87d973efb6" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="32az9sl4QvMjPRPncnwE6Y6wDRg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test_grade_boundaries.test_calc_grade.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_Caesar_cipher.test_erroneous_data_calc_grade.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_Caesar_cipher.test_normal_cipher.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_Caesar_cipher.test_normal_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_grade_boundaries.test_erroneous_data_calc_grade.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_grade_boundaries.test_min_calc_grade.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_boolean_type.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_boundary_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_erroneous_data_calc_grade.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_normal_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_string_type.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_type_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_type_errors_calc_grade.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_grade_boundaries.test_erroneous_data_calc_grade.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_Caesar_cipher.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_grade_boundaries.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Caesar_cipher.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Quadratic_solver.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grade_boundaries.executor&quot;: &quot;Run&quot;,
+    &quot;Python.input_validator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_quadratic_solver.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/meglee0809/OneDrive - Highgate School/Year 12/Compsci/Project/Pycharm/AGD Classwork&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\meglee0809\OneDrive - Highgate School\Year 12\Compsci\Project\Pycharm\AGD Classwork\class_exercises\tdd" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\meglee0809\OneDrive - Highgate School\Year 12\Compsci\Project\Pycharm\AGD Classwork\class_exercises\tdd" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.test_quadratic_solver">
+    <configuration name="test_quadratic_solver" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="AGD Classwork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/class_exercises/tdd" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/class_exercises/tdd/test_quadratic_solver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for class_exercises.tdd.test_quadratic_solver.test_boolean_type" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="AGD Classwork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;class_exercises.tdd.test_quadratic_solver.test_boolean_type&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for class_exercises.tdd.test_quadratic_solver.test_boundary_data" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="AGD Classwork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;class_exercises.tdd.test_quadratic_solver.test_boundary_data&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for class_exercises.tdd.test_quadratic_solver.test_normal_data" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="AGD Classwork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;class_exercises.tdd.test_quadratic_solver.test_normal_data&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for class_exercises.tdd.test_quadratic_solver.test_string_type" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="AGD Classwork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;class_exercises.tdd.test_quadratic_solver.test_string_type&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for class_exercises.tdd.test_quadratic_solver.test_type_data" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="AGD Classwork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;class_exercises.tdd.test_quadratic_solver.test_type_data&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_boundary_data" />
+        <item itemvalue="Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_normal_data" />
+        <item itemvalue="Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_type_data" />
+        <item itemvalue="Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_boolean_type" />
+        <item itemvalue="Python tests.pytest for class_exercises.tdd.test_quadratic_solver.test_string_type" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-ce6832f46686-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.178" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d89dd935-e5af-4ce4-8247-1a87d973efb6" name="Changes" comment="" />
+      <created>1757673323097</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757673323097</updated>
+      <workItem from="1757673324013" duration="2051000" />
+      <workItem from="1758271350197" duration="3126000" />
+      <workItem from="1758550986618" duration="2232000" />
+      <workItem from="1758790158116" duration="911000" />
+      <workItem from="1758881729778" duration="3110000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/class_exercises/Test Driven Development (tdd)/test_grade_boundaries.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/class_exercises/Test Driven Development (tdd)/test_quadratic_solver.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AGD_Classwork$pytest_in_test_Caesar_cipher_py.coverage" NAME="pytest in test_Caesar_cipher.py Coverage Results" MODIFIED="1758553117333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_exercises/tdd" />
+    <SUITE FILE_PATH="coverage/AGD_Classwork$pytest_for_test_grade_boundaries_test_erroneous_data_calc_grade.coverage" NAME="pytest for test_grade_boundaries.test_erroneous_data_calc_grade Coverage Results" MODIFIED="1758274163246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_exercises/tdd" />
+    <SUITE FILE_PATH="coverage/AGD_Classwork$pytest_in_test_grade_boundaries_py.coverage" NAME="pytest in test_grade_boundaries.py Coverage Results" MODIFIED="1758273798486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_exercises/tdd" />
+    <SUITE FILE_PATH="coverage/AGD_Classwork$grade_boundaries.coverage" NAME="grade_boundaries Coverage Results" MODIFIED="1758274061602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_exercises/tdd" />
+    <SUITE FILE_PATH="coverage/AGD_Classwork$Caesar_cipher.coverage" NAME="Caesar_cipher Coverage Results" MODIFIED="1758552234505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_exercises/tdd" />
+    <SUITE FILE_PATH="coverage/AGD_Classwork$.coverage" NAME=" Coverage Results" MODIFIED="1758273117562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_exercises/tdd" />
+    <SUITE FILE_PATH="coverage/AGD_Classwork$input_validator.coverage" NAME="input_validator Coverage Results" MODIFIED="1757674300649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/class_exercises/tdd" />
+  </component>
+</project>
