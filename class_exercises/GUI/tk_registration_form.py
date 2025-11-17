@@ -64,7 +64,7 @@ class TextLabels(tk.Frame):
         self.place_widgets()
 
     def place_widgets(self):
-        settings = {'padx': 10, 'pady': 9, 'sticky': 'nswe'}
+        settings = {'padx': 10, 'pady': 5, 'sticky': 'w'}
         self.fullname_label.grid(row=0, column=0, **settings)
         self.email_label.grid(row=1, column=0, **settings)
         self.gender_label.grid(row=2, column=0, **settings)
@@ -83,9 +83,9 @@ class EnterBoxes(tk.Frame):
         self.place_widgets()
 
     def place_widgets(self):
-        settings = {'padx': 10, 'pady': 10, 'sticky': 'nswe'}
-        self.fullname_entry.grid(row=0, column=0, **settings)
-        self.email_entry.grid(row=1, column=0, **settings)
+        settings = {'padx': 10, 'sticky': 'w'}
+        self.fullname_entry.grid(row=0, column=0, pady = 0, **settings)
+        self.email_entry.grid(row=1, column=0, pady = 2, **settings)
 
 class CountryPicker(tk.Frame):
     def __init__(self, master):
@@ -160,6 +160,6 @@ class SubmitButton(tk.Frame):
 if __name__ == '__main__':
     app = MainApp()
     app.title("Registration Form")
-    app.geometry('550x500+100+100')
+    app.geometry('600x300+100+100')
 
     app.mainloop()
