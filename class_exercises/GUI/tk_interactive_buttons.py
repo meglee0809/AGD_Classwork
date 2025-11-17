@@ -102,7 +102,7 @@ class RadioColorFrame(tk.Frame):
         # Color choices
         self.colors = ['red', 'yellow', 'green','cool']
 
-        # Create a tk variable which will hold the value of the selected color
+        # Create a tk variable which will hold the value of the selected8 color
         self.selected_color = tk.StringVar()
         self.selected_color.set(self.colors[0])
 
