@@ -1,12 +1,19 @@
 import tkinter as tk
+from tkinter import ttk
+
 
 class Mainapp(tk.Tk):
     def __init__(self):
         super().__init__()
 
-        self.heading = Heading(self)
+        self.Heading = Heading(self)
 
-        self.heading.grid(row=0, column=0)
+        self.Temperatures = Temperatures(self)
+
+        self.Heading.grid(row=0, column=0, columnspan=3)
+
+        self.Temperatures.grid(row=2, column=0)
+
 
 class Heading(tk.Frame):
     def __init__(self, master):
@@ -21,10 +28,50 @@ class Heading(tk.Frame):
         self.heading.grid(row=0, column=0, **settings)
 
 
+class EntryBox():
+    pass
 
 
+class SubmitButton(tk.Frame):
+    def __init__(self, master):
+        super().__init__(master)
+
+        self.submit = tk.Button(self, text="Submit",
+                                bg="gray67", fg="gray1",
+                                activebackground="red",
+                                activeforeground="white")
+        self.place_widgets()
+
+    def place_widgets(self):
+        settings = {'padx': 10, 'pady': 5, 'sticky': 'w'}
+        self.submit.grid(row=0, column=0, **settings)
 
 
+class Temperatures(tk.Frame):
+    def __init__(self, master):
+        super().__init__(master)
+
+        #self.config(bg="midnight blue")
+        # USE AFTER -> text_color = "white"
+        self.Celcius = tk.Label(self, text="Celcius", font="Arial", justify=tk.LEFT)
+        self.Celciusoutput = tk.Label(self, text="", font="Arial")
+
+        self.Fahrenheit = tk.Label(self, text="Fahrenheit", font="Arial", justify=tk.LEFT)
+        self.Fahrenheitoutput = tk.Label(self, text="", font="Arial")
+
+        self.Kelvin = tk.Label(self, text="Kelvin", font="Arial")
+        self.Kelvinoutput = tk.Label(self, text="", font="Arial")
+
+        self.place_widgets()
+
+    def place_widgets(self):
+        settings = {'padx': 10, 'pady': 5, 'sticky': 'w'}
+        self.Celcius.grid(row=0, column=0, **settings)
+        self.Celciusoutput.grid(row=0, column=1, **settings)
+        self.Fahrenheit.grid(row=1, column=0, **settings)
+        self.Fahrenheitoutput.grid(row=1, column=1, **settings)
+        self.Kelvin.grid(row=2, column=0, **settings)
+        self.Kelvinoutput.grid(row=2, column=1, **settings)
 
 
 
