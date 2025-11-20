@@ -1,6 +1,17 @@
 import tkinter as tk
 from tkinter import ttk
-
+''' RESPONSE - “Well done. Your registration form looks great and I really like the careful details, 
+such as setting the colors on the submit button. Some pupils did the whole form as one frame, 
+and you have gone the other way with including many frames. 
+This means that it is hard to make everything line up - 
+your response boxes don't quite line up with your labels.
+A good tip is to temporarily give every frame a different background, 
+and then you will see exactly how the frames are spaced.
+A better option would be to use a single grid system for the whole main menu. 
+If something doesn't fit in the grid (like the overall title), 
+you can spread if over two columns using the COLUMNSPAN option, which is like merging cells in excel. 
+The radio boxes and check boxes can be in their own frame, but these frames are placed within the overall grid. 
+For check box widgets themselves it's easier to pack them in their frame rather than use the grid geometry.”'''
 
 # big frames ----------------------------------------------------------------------------------------------
 class MainApp(tk.Tk):
