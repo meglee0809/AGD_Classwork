@@ -24,7 +24,7 @@ class MainApp(tk.Tk):
         self.submit_button = SubmitButton(self)
 
         self.MainTitle.grid(row=0, column=0)
-        self.text_labels.grid(row=1, column=0)
+        self.text_labels.grid(row=1, column=0, rowspan = 5)
         self.options.grid(row=1, column=1)
         self.submit_button.grid(row=2, column=0)
 
@@ -38,10 +38,10 @@ class Options(tk.Frame):
         self.country_picker = CountryPicker(self)
         self.checkbox_frame = CheckboxFrame(self)
 
-        self.entry_boxes.grid(row=1, column=0)
-        self.radio_boxes.grid(row=2, column=0)
-        self.country_picker.grid(row=3, column=0)
-        self.checkbox_frame.grid(row=4, column=0)
+        self.entry_boxes.grid(row=1, column=0,rowspan=2)
+        self.radio_boxes.grid(row=3, column=0)
+        self.country_picker.grid(row=4, column=0)
+        self.checkbox_frame.grid(row=5, column=0)
 
 
 # smol frames ---------------------------------------------------------------------------------------------------
