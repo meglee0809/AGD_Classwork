@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from tk_temperature import *
 
 
 class Mainapp(tk.Tk):
@@ -20,16 +21,25 @@ class Heading(tk.Frame):
         super().__init__(master)
 
         self.heading = tk.Label(self, text="THE Temperature Conversion App", font=("Arial", 20))
+        self.place_widgets()
+
+    def place_widgets(self):
+        settings = {'padx': 10, 'pady': 10, 'sticky': 'w'}
+        self.heading.grid(row=0, column=0, **settings)
+
+
+class EntryBox(tk.Frame):
+    def __init__(self, master):
+        super().__init__(master)
+
+        self.entry = tk.Entry(self)
+        self.combobox = ttk.Combobox(self)
 
         self.place_widgets()
 
     def place_widgets(self):
-        settings = {'padx': 10, 'pady': 10, 'sticky': 'nswe'}
-        self.heading.grid(row=0, column=0, **settings)
-
-
-class EntryBox():
-    pass
+        settings = {'padx': 10, 'pady': 10, 'sticky': 'w'}
+        self.entry.grid(row=0, column=1, **settings)
 
 
 class SubmitButton(tk.Frame):
@@ -54,13 +64,13 @@ class Temperatures(tk.Frame):
         #self.config(bg="midnight blue")
         # USE AFTER -> text_color = "white"
         self.Celcius = tk.Label(self, text="Celcius", font="Arial", justify=tk.LEFT)
-        self.Celciusoutput = tk.Label(self, text="", font="Arial")
+        self.Celciusoutput = tk.Label(self, text=f"{temp.celsius}", font="Arial")
 
         self.Fahrenheit = tk.Label(self, text="Fahrenheit", font="Arial", justify=tk.LEFT)
-        self.Fahrenheitoutput = tk.Label(self, text="", font="Arial")
+        self.Fahrenheitoutput = tk.Label(self, text=f"{temp.fahrenheit}", font="Arial")
 
         self.Kelvin = tk.Label(self, text="Kelvin", font="Arial")
-        self.Kelvinoutput = tk.Label(self, text="", font="Arial")
+        self.Kelvinoutput = tk.Label(self, text=f"{temp.kelvin}", font="Arial")
 
         self.place_widgets()
 
