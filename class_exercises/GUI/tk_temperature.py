@@ -14,7 +14,11 @@ class Temperature:
 
     @property
     def celsius(self):
-        return f'{self._celsius} \u00B0C'
+        return f'{self._celsius:.2f} \u00B0C'
+
+    @property
+    def celsiusint(self):
+        return int(self._celsius)
 
     @celsius.setter
     def celsius(self, value: float):
@@ -25,7 +29,7 @@ class Temperature:
     @property
     def fahrenheit(self)  -> float:
         fahrenheit = (self._celsius * 9 / 5) + 32
-        return fahrenheit
+        return f'{fahrenheit:.2f} \u00B0F'
 
     @fahrenheit.setter
     def fahrenheit(self, value: float):
@@ -34,7 +38,7 @@ class Temperature:
     @property
     def kelvin(self) -> float:
         kelvin = self._celsius + 273.15
-        return kelvin
+        return f'{kelvin:.2f} \u00B0K'
 
     @kelvin.setter
     def kelvin(self, value: float):
