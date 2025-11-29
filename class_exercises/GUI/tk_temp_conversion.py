@@ -148,14 +148,16 @@ class PhotoFrame(tk.Frame):
         self.current_photo = None
 
     def update_photo(self, temp):
-        if temp.celsiusint >= 22:
-            photo_file = "hawt.png"
-        elif temp.celsiusint < 4:
+        if temp.celsiusint < -200 or temp.celsiusint > 150:
+            photo_file = "xtreme.png"
+        elif temp.celsiusint < -20:
             photo_file = "kalt.png"
+        elif temp.celsiusint >= 22:
+            photo_file = "hawt.png"
         else:
             photo_file = "leaf.png"
 
-        self.current_photo = tk.PhotoImage(file=photo_file,size)
+        self.current_photo = tk.PhotoImage(file=photo_file)
         self.photo_label.config(image=self.current_photo)
 
 
