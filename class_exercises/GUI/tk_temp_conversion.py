@@ -59,6 +59,10 @@ class TemperatureFrame(tk.Frame):
         self.Kelvin = tk.Label(self, text="Kelvin", font="Arial", justify=tk.LEFT)
         self.Kelvinoutput = tk.Label(self, text=f"{'''temp.kelvin'''}", font="Arial")
 
+        #third row--------
+        self.slider = tk.Scale(self, from_=0, to=255, orient=tk.HORIZONTAL,
+                               ) #command=self.sliderchange
+
         self.place_widgets()
         self.change_bg_colours()
 
@@ -74,6 +78,8 @@ class TemperatureFrame(tk.Frame):
         self.Fahrenheitoutput.grid(row=2, column=1, **settings)
         self.Kelvin.grid(row=3, column=0, **settings)
         self.Kelvinoutput.grid(row=3, column=1, **settings)
+
+        self.slider.grid(row=4, column=0, columnspan=2, **settings)
 
 
     def change_bg_colours(self):
