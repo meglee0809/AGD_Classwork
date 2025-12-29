@@ -21,7 +21,6 @@ protectedtracks = cursor.fetchall()
 print(protectedtracks)
 
 #3
-
 cityes = []
 seen = set()
 counted_cityes = []
