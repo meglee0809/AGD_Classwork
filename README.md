@@ -4,6 +4,8 @@
 - Test-Driven Development
 - Comprehensions
 - Object Oriented Programming (OOP)
+- Tkinter
+- Databases
 
 # yippee
 ## yippee
