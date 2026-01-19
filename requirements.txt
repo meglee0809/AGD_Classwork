@@ -1,4 +1,6 @@
 pytest ~= 8.4.2
 numpy ~= 2.3.4
 matplotlib ~= 3.10.7
+sqlalchemy
 faker
+typing
