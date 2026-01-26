@@ -7,7 +7,7 @@ from sqlalchemy import ForeignKey
 # Base is called an Abstract Base Class - our SQL Alchemy models will inherit from this class
 class Base(so.DeclarativeBase):
     pass
-
+#
 # Sets up a link table with activity_id and person_id as foreign keys
 # Base.metadata is a container object that keeps together many different features of the database.
 # Note that this table is created in the sqlalchemy layer, not in sqlalchemy.orm - it will therefore

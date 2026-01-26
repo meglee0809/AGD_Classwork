@@ -16,31 +16,52 @@ class Controller:
             activity_names = [activity.name for activity in activities]
         return activity_names
 
-    def get_activities_peopl(self,activities_name):
+    def get_activities_people(self,activities_name):
         with so.Session(bind=self.engine) as session:
             stmt = sa.select(Activity).where(Activity.name == activities_name)
             activity = session.scalar(stmt)
-            peoples = activity.person
-            people_names = [{person.firstname, person.last_name} for person in peoples]
+            peoples = activity.attendees #the name mr dales chose !!
+            people_names = [{person.first_name, person.last_name} for person in peoples]
+        return people_names
+
+    def add_person(self,first_name,last_name):
+        with so.Session(bind=self.engine) as session:
+            person = Person(first_name=first_name, last_name=last_name)
+            session.add(person)
+            session.commit()
+
+    def delete_person(self, person_id):
+        with so.Session(bind=self.engine) as session:
+            person = session.get(Person, person_id)
+            session.delete(person)
+            session.commit()
 
 
-    def edit_person(self):
-        pass
+    def edit_person(self, person_id, first_name, last_name):
+        with so.Session(bind=self.engine) as session:
+            person = session.get(Person, person_id)
+            person.first_name = first_name
+            person.last_name = last_name
+            session.commit()
 
-    def add_person(self):
-        pass
 
-    def delete_person(self):
-        pass
+    def add_activity(self,activity_name):
+        with so.Session(bind=self.engine) as session:
+            activity = Activity(name=activity_name)
+            session.add(activity)
+            session.commit()
 
-    def edit_activity(self):
-        pass
+    def delete_activity(self, activity_id):
+        with so.Session(bind=self.engine) as session:
+            activity = session.get(Activity, activity_id)
+            session.delete(activity)
+            session.commit()
 
-    def add_activity(self):
-        pass
-
-    def delete_activity(self):
-        pass
+    def edit_activity(self, activity_id, activity_name):
+        with so.Session(bind=self.engine) as session:
+            activity = session.get(Activity, activity_id)
+            activity.name = activity_name
+            session.commit()
 
 if __name__ == '__main__':
     controller = Controller()
