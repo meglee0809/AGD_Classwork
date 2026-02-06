@@ -23,7 +23,6 @@ class CLI:
         self.running = False
         print("Goodbye")
 
-
     def login(self):
         self.show_title('Login Screen')
         users = self.controller.get_user_names()
@@ -49,16 +48,10 @@ class CLI:
                 next_menu = self.login
         return next_menu
 
-
     def create_account(self):
         self.show_title('Create Account')
-        user_name = input('Enter your name: ')
-        user_age = input('Enter your age: ')
-        user_gender = input('Enter your gender: ')
-        user_nationality = input('Enter your nationality: ')
-        self.controller.create_account(user_name, user_age, user_gender, user_nationality)
-        print("Successfully created account!! WELCOME :D")
-        return self.user_home
+        input('Under construction')
+        return self.login
 
     def user_home(self):
         user_name = self.controller.get_user_name()
@@ -67,7 +60,6 @@ class CLI:
         return self.login
 
 
-
 if __name__ == '__main__':
     cli = CLI()
-controller = Controller()
+# controller = Controller()

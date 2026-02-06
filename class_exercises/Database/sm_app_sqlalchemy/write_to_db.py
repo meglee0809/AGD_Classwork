@@ -2,7 +2,7 @@ import sqlalchemy as sa
 import sqlalchemy.orm as so
 from models import User, Post, Comment, Base
 
-sqlite_engine = sa.create_engine('sqlite:///social_media.db', echo=True)
+sqlite_engine = sa.create_engine('sqlite:///social_media.sqlite', echo=True)
 
 # Create a session
 session = so.Session(bind=sqlite_engine)

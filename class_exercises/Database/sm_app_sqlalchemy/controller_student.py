@@ -6,7 +6,7 @@ from class_exercises.Database.sm_app_sqlalchemy.models import User, Post, Commen
 
 
 class Controller:
-    def __init__(self, db_location = 'sqlite:///social_media.db'):
+    def __init__(self, db_location = 'sqlite:///social_media.sqlite'):
         self.current_user_id: int|None = None
         self.viewing_post_user_id: int|None = None
         self.engine = sa.create_engine(db_location)
@@ -43,6 +43,13 @@ class Controller:
         with so.Session(bind=self.engine) as session:
             user_names = session.scalars(sa.select(User.name).order_by(User.name)).all()
         return list(user_names)
+
+
+    def create_account(self, user_name: str, user_age: str, user_gender: str, user_nationality: str):
+        with so.Session(bind=self.engine) as session:
+            user = User(name=user_name, age=user_age, gender=user_gender, nationality=user_nationality)
+            session.add(user)
+            session.commit()
 
 if __name__ == '__main__':
     controller = Controller()
